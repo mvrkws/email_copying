@@ -1,9 +1,9 @@
 import pyperclip
 
-def group(n):
+def copy_emails_from_group(n):
 	copy = ""
 	sepr = "\n"
-	for email in open("emails_real", "r").read().split("\n"):
+	for email in open("emails", "r").read().split("\n"):
 		try:
 			email, group = email.split("\t")
 		except:
@@ -14,4 +14,4 @@ def group(n):
 
 	pyperclip.copy(copy[:-len(sepr)])
 
-group(2)
+copy_emails_from_group(2)
